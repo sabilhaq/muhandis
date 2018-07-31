@@ -1,0 +1,136 @@
+
+
+body {
+    background-color: #C5EFF7;
+    font-family: Raleway, serif;
+    font-size: 16px;
+    font-color: black;
+    text-align: center;
+    font-weight: 550;
+}
+body {
+    margin: 0;
+}
+p {
+    text-align: justify;
+    font-weight: 600;
+    
+}
+
+#head-page {
+    font-family: "Roboto Slab", serif;
+    text-shadow: 4px 4px #CCC;
+    font-size: 50px;
+}
+
+.content {
+    background-color: #E4F1FE;
+    padding
+    border: 
+}
+
+h2 {
+    text-align: left;
+    font-family: Exo, serif;
+    font-weight: 600;
+}
+
+#profil {
+    background-color: #9AECDB;
+    margin: 15;
+    padding: 10px; 
+}
+    
+#program {
+    padding: 0;
+    margin: 15
+}
+
+#catatan {
+    background-color: #f5f6fa;
+    padding: 0;
+    margin: 0;
+}
+
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+header{
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%x;
+    height: 55px;
+    background-color: #4ccccd;
+    margin: 0;
+    border: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    z-index: 1;
+}
+
+#heading{
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    
+}
+
+#header-img{
+    display: block;
+    width: auto;
+    height: 45px;
+    margin-right: 20px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    
+}
+
+#headtitle{
+    text-align: center;
+    font-family:"Roboto Slab",monospace;
+    margin: auto;
+}
+
+
+#nav-bar {
+    height: 55px;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    align-content: center;
+    text-align: center;
+    overflow: hidden;
+    background-color:#4ccccd;
+    
+}
+
+.nav-button{
+    height: 60px;
+    display: table;
+    background-color:  #4ccccd;
+}
+
+.nav-button .nav-link:hover{
+    background-color: white;
+   color: black;
+}
+
+.nav-link{
+    display: table-cell;
+    vertical-align: middle;
+    color: black;
+    font-family: "Exo", sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1em;
+}
