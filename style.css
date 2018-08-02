@@ -1,72 +1,108 @@
+html, body {
+    background-color: #0080D7;
+    color: white;
+    margin: 0;
+    height: 100%;
+}
 
+/* Hero Image */
 
-body {
-    background-color: #C5EFF7;
-    font-family: Raleway, serif;
-    font-size: 16px;
-    font-color: black;
+#hero {
+    height: 100%;
+}
+
+/* Home */
+
+#home {
+    background-image: url("bg-black.jpg");
+    height: 100%;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#hero-text {
+    position: absolute;
     text-align: center;
-    font-weight: 550;
-}
-body {
-    margin: 0;
-}
-p {
-    text-align: justify;
-    font-weight: 600;
-    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
 }
 
-#head-page {
+#hero-logo {
+    max-height: 185px;
+    width: auto;
+}
+
+.hero-title {
+    color: ;
     font-family: "Roboto Slab", serif;
-    text-shadow: 4px 4px #CCC;
-    font-size: 50px;
-}
-
-.content {
-    background-color: #E4F1FE;
-    padding
-    border: 
-}
-
-h2 {
-    text-align: left;
-    font-family: Exo, serif;
-    font-weight: 600;
-}
-
-#profil {
-    background-color: #9AECDB;
-    margin: 15;
-    padding: 10px; 
-}
-    
-#program {
-    padding: 0;
-    margin: 15
-}
-
-#catatan {
-    background-color: #f5f6fa;
-    padding: 0;
+    font-size: 7em;
+    text-shadow: 3px 3px #0080D7;
     margin: 0;
 }
 
+#hero-title-2 {
+    font-size: 5em;
+    color: white;
 }
+
+#hero-desc {
+    font-family: "Exo", sans-serif;
+    font-size: 1.5em;
+    margin: 0;
+    font-weight: 700;
+}
+
+#hero-button {
+    background-color:gold;
+    color: darkslategrey;
+    border-radius: 10px;
+    margin-top: 30px;
+    height:50px;
+    width: 150px;
+    font-family: "Oxygen", sans-serif;
+    font-size: 1.2em; 
+    font-weight: 700;
+}
+
+/* Responsive Hero */
+
+@media(max-width: 436px){
+    #hero-text {
+        transform: translate(-50%, -55%);
+    }
+    #hero-logo {
+        height: 65%;
+        width: auto;
+    }
+    .hero-title {
+        font-size: 17vw;
+    }
+    #hero-title-2 {
+        font-size: 15vw;
+    }
+    #hero-desc {
+        font-size: 5vw;
+    }
+}
+
+/* Navigation Bar */
+
 .sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
-
-header{
+header {
     top: 0;
     right: 0;
     left: 0;
     width: 100%x;
     height: 55px;
-    background-color: #4ccccd;
+    background-color: #191970;
     margin: 0;
     border: 0;
     display: grid;
@@ -74,31 +110,31 @@ header{
     z-index: 1;
 }
 
-#heading{
-    width: 300px;
+#headimg {
+    width: 350px;
     display: flex;
     flex-direction: row;
     height: 100%;
-    
+    font-size-adjust: auto;
+    font-size: 14px;
 }
 
-#header-img{
+#header-img {
     display: block;
     width: auto;
     height: 45px;
-    margin-right: 20px;
+    margin-right: 0px;
     margin-left: 10px;
     margin-bottom: 5px;
-    margin-top: 5px;
-    
+    margin-top: 5px;    
 }
 
-#headtitle{
-    text-align: center;
+#headtitle {
+    text-align: left;
     font-family:"Roboto Slab",monospace;
     margin: auto;
+    margin-left: 20px;
 }
-
 
 #nav-bar {
     height: 55px;
@@ -110,27 +146,432 @@ header{
     align-content: center;
     text-align: center;
     overflow: hidden;
-    background-color:#4ccccd;
-    
+    background-color: #191970;
 }
 
-.nav-button{
-    height: 60px;
+.nav-button {
+    height: 55px;
     display: table;
-    background-color:  #4ccccd;
+    background-color: #191970;
 }
 
-.nav-button .nav-link:hover{
+.nav-button .nav-link:hover {
     background-color: white;
-   color: black;
+    color: #191970;
 }
 
-.nav-link{
+.nav-link {
     display: table-cell;
     vertical-align: middle;
-    color: black;
+    color: white;
     font-family: "Exo", sans-serif;
     font-weight: 600;
     text-decoration: none;
     font-size: 1em;
 }
+
+/* RWD Navbar */
+
+@media(max-width: 610px) {
+    .nav-link{
+        font-size: 2vw;
+    }
+}
+
+@media(max-width: 444px) {
+    header{
+        grid-template-columns: 1fr;
+        grid-row-gap: 0;
+        border: 0;
+        margin: 0;
+    }
+    main {
+        padding-top: 100px;
+    }
+    #headimg {
+        padding-bottom: 0;
+    }
+    .nav-link {
+        font-size: 3vw;
+    }
+    main {
+        padding-top: 50px;
+    }
+
+    #tentang {
+        padding-top: 125px;
+    }
+}
+
+/*Main*/
+
+main {
+    height: 100%;
+    padding-top: 60px;
+}
+
+.sticky + main {
+    padding-top: 150px;
+}
+
+/*Opening*/
+
+/*.triangle{
+   width: 0;
+    height: 0;
+	border-right: 100px solid #c86802;
+	border-bottom: 100px solid transparent;
+    
+}*/
+
+#video {
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+
+/* Tentang */
+
+#tentang {
+    background-color: #001e4c;
+    padding-top: 70px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 70px;
+    display: grid;
+    grid-template-rows: 0fr 0fr;
+    grid-template-columns: fr 0fr;
+    grid-row-gap: 0px;
+    margin: 0;
+    border: 0; 
+}
+
+.tentang-content {
+    grid-row: auto;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 0;
+    text-align: justify;
+}
+
+.tentang-logo {
+    height: 140px;
+    grid-column: 2;
+    grid-row: 1/span 2;
+    font-size: 140px;
+    text-align: center;
+    margin-bottom: 0;
+    padding-top: 0.5em;
+}
+
+.material-icons {
+    height: 150px;
+    grid-column: 2;
+    grid-row: 1/span 2;
+    font-size: 140px;
+    text-align: center;
+    padding-top: 0.3em;
+}
+
+.tentang-subtitle {
+    font-family: "Exo",sans-serif;
+    font-weight: 700;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    font-size: 1.5em;
+}
+
+.tentang-desc {
+    font-family: "Exo", sans-serif;
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+@media(max-width: 500px) {
+    #tentang {
+        grid-row-gap: 100px;
+    }
+    .tentang-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.3fr; 3fr;
+        text-align: center;
+    }
+    .tentang-subtitle {
+        grid-column: 1;
+        grid-row: 2;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 0;
+    }
+    .tentang-logo{
+        grid-column: 1;
+        grid-row: 1;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 0;
+    }
+    #tentangtaysirlogo {
+        margin-bottom: 70px;
+    }
+    .tentang-desc{
+        margin: 0;
+        padding-top: 0;
+        grid-column: 1;
+        grid-row: 3;
+    }
+}
+
+/* Program */
+
+#program {
+    padding-top: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 0;
+    margin: 0;
+    background-color: #c23616;
+}
+
+#program-title {
+    font-family: "Exo",sans-serif;
+}
+
+#grid-kelas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: "Exo",sans-serif;
+}
+
+.kelas-content {
+    grid-row: auto;
+    grid-column: auto;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr 0.5fr 2fr;
+    grid-row-gap: 0;
+    text-align: center;
+    padding: 10%;
+    line-height: 1.5em;
+}
+
+.kelas-logo {
+    grid-row: 1;
+    font-size: 75px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+@media(max-width: 500px) {
+    #grid-kelas {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 0.3fr 1fr;
+    }
+}
+
+/* Kontak */
+
+#kontak {
+    margin: 0;
+    padding-top: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 0;
+    margin: 0;
+    font-family: "Exo", sans-serif;
+    width: auto;
+    
+}
+
+.kontak-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 0.1fr 0.5fr;
+}
+
+#kontak-title {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#detailmahad {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    text-align: right;
+}
+
+#kontakmuhandislogo {
+    width: 200px;
+    height: 30%;
+}
+
+#donasi {
+    grid-column: 1;
+    grid-row: 2;
+    width: auto;
+}
+
+#langganan {
+    grid-row: 3;
+    margin: 0;
+    padding: 0;
+}
+
+#email {
+    height:20px;
+    margin-right: 20px;
+}
+
+#submit {
+    background-color:gold;
+    color: darkslategrey;
+    border-radius: 10px;
+    height:28px;
+    width: 100px;
+    font-family: "Oxygen", sans-serif;
+    font-size: 1em; 
+    font-weight: 700;
+}
+
+#kontak-desc {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+}
+
+#sosmed {
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+}
+
+.sosmed-link {
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    grid-column-gap: 25px;
+    
+}
+
+.sosmed-logo {
+    grid-column: 1;
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.sosmed-desc {
+    grid-column: 2/span 3;
+    position: relative;
+    bottom: 5px;
+}
+
+#copyright {
+    text-align: right;
+    grid-column: 2;
+    grid-row: 3;
+   
+}
+
+#copyright > a {
+    text-decoration: none;
+    color: white;
+}
+
+@media(max-width: 739px) {
+    #kontak {
+        padding:auto;
+    }
+    .kontak-content {
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 1fr 1fr 0.2fr 0.5fr 0.5fr;
+    }
+    #kontak-title {
+        text-align: left;
+        grid-column: 1;
+        grid-row: 1;
+    }
+    #detailmahad {
+        text-align: center;
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #donasi {
+        font-size: 4vw;
+        width: 30%;
+         grid-column: 1;
+        grid-row: 3;
+        word-wrap: break-word;
+        margin: 0;
+        padding: 0;
+    }
+    #langganan {
+        grid-column: 1;
+        grid-row: 4;
+        margin: 0;
+    }
+    #form {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    #form * {
+        justify-self: center;
+        width: 30%;
+        grid-row:auto;
+    }
+    #email {
+        width: 70%;
+        margin-right: 0;
+        margin-bottom: 5px;
+        margin-top: 0;
+    } 
+    #kontak-desc {
+        grid-column: 1;
+        grid-row: 5;
+    }
+    #copyright {
+        text-align: center;
+        grid-column: 1;
+        grid-row: 6;
+    }
+}
+
+@media(max-width: 444px) {
+    .kontak-content {
+        width: 40%;
+        grid-row-gap: 0;
+    }
+     #detailmahad {
+        margin-left: 5%;
+        width: 80%;
+    }
+    #donasi {
+       text-align: left;
+        width: 90%;
+        height: 80%;
+        word-wrap: break-word;
+    }
+    #kontak-desc {
+        width: 50%;
+        margin-left: 25%;
+        margin-bottom: 10%;
+    }
+    #sosmed {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .sosmed-link {
+        grid-row: auto;
+    }
+    .sosmed-logo {
+        margin:0;
+    }
+    .sosmed-desc {
+        text-align: left;
+    }
+}
+
